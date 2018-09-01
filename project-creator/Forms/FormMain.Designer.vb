@@ -34,6 +34,7 @@ Partial Class FormMain
         Me.LabelProjectsDirectory = New System.Windows.Forms.Label()
         Me.LabelProjectName = New System.Windows.Forms.Label()
         Me.LabelExceptionProjectName = New System.Windows.Forms.Label()
+        Me.ButtonAddRemote = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LabelTitle
@@ -161,6 +162,19 @@ Partial Class FormMain
         Me.LabelExceptionProjectName.Size = New System.Drawing.Size(0, 18)
         Me.LabelExceptionProjectName.TabIndex = 11
         '
+        'ButtonAddRemote
+        '
+        Me.ButtonAddRemote.FlatAppearance.BorderSize = 0
+        Me.ButtonAddRemote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonAddRemote.Font = New System.Drawing.Font("HelveticaNeueLT W1G 65 Md", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.ButtonAddRemote.ForeColor = System.Drawing.Color.White
+        Me.ButtonAddRemote.Location = New System.Drawing.Point(365, 265)
+        Me.ButtonAddRemote.Name = "ButtonAddRemote"
+        Me.ButtonAddRemote.Size = New System.Drawing.Size(110, 30)
+        Me.ButtonAddRemote.TabIndex = 12
+        Me.ButtonAddRemote.Text = "Add remote"
+        Me.ButtonAddRemote.UseVisualStyleBackColor = True
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -169,6 +183,7 @@ Partial Class FormMain
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(500, 750)
         Me.ControlBox = False
+        Me.Controls.Add(Me.ButtonAddRemote)
         Me.Controls.Add(Me.LabelTitle)
         Me.Controls.Add(Me.LabelExceptionProjectName)
         Me.Controls.Add(Me.LabelProjectName)
@@ -181,7 +196,6 @@ Partial Class FormMain
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Location = New System.Drawing.Point(0, 0)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(500, 750)
         Me.MinimizeBox = False
@@ -207,4 +221,5 @@ Partial Class FormMain
     Friend WithEvents TextBoxProjectName As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents ButtonAddRemote As Button
 End Class
