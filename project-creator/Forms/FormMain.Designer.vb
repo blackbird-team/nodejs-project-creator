@@ -23,11 +23,10 @@ Partial Class FormMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.LabelTitle = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.ButtonExit = New System.Windows.Forms.Button()
         Me.ButtonCreate = New System.Windows.Forms.Button()
         Me.TextBoxProjectName = New System.Windows.Forms.TextBox()
+        Me.TextBoxProjectVersion = New System.Windows.Forms.TextBox()
         Me.LabelProjectsPath = New System.Windows.Forms.Label()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.ButtonChangeProjectsPath = New System.Windows.Forms.Button()
@@ -35,6 +34,7 @@ Partial Class FormMain
         Me.LabelProjectName = New System.Windows.Forms.Label()
         Me.LabelExceptionProjectName = New System.Windows.Forms.Label()
         Me.ButtonAddRemote = New System.Windows.Forms.Button()
+        Me.LabelProjectVersion = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'LabelTitle
@@ -47,23 +47,6 @@ Partial Class FormMain
         Me.LabelTitle.Size = New System.Drawing.Size(223, 38)
         Me.LabelTitle.TabIndex = 0
         Me.LabelTitle.Text = "Project Creator"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(19, 330)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(326, 20)
-        Me.TextBox1.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("HelveticaNeueLT W1G 35 Th", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(134, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(19, 397)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 38)
-        Me.Label1.TabIndex = 2
         '
         'ButtonExit
         '
@@ -98,11 +81,24 @@ Partial Class FormMain
         Me.TextBoxProjectName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBoxProjectName.Font = New System.Drawing.Font("Consolas", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.TextBoxProjectName.ForeColor = System.Drawing.Color.White
-        Me.TextBoxProjectName.Location = New System.Drawing.Point(164, 116)
+        Me.TextBoxProjectName.Location = New System.Drawing.Point(164, 121)
         Me.TextBoxProjectName.Margin = New System.Windows.Forms.Padding(10)
         Me.TextBoxProjectName.Name = "TextBoxProjectName"
         Me.TextBoxProjectName.Size = New System.Drawing.Size(175, 24)
         Me.TextBoxProjectName.TabIndex = 5
+        '
+        'TextBoxProjectVersion
+        '
+        Me.TextBoxProjectVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.TextBoxProjectVersion.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxProjectVersion.Font = New System.Drawing.Font("Consolas", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.TextBoxProjectVersion.ForeColor = System.Drawing.Color.White
+        Me.TextBoxProjectVersion.Location = New System.Drawing.Point(164, 166)
+        Me.TextBoxProjectVersion.Margin = New System.Windows.Forms.Padding(10)
+        Me.TextBoxProjectVersion.Name = "TextBoxProjectVersion"
+        Me.TextBoxProjectVersion.Size = New System.Drawing.Size(175, 24)
+        Me.TextBoxProjectVersion.TabIndex = 13
+        Me.TextBoxProjectVersion.Text = "0.0.1-alpha"
         '
         'LabelProjectsPath
         '
@@ -113,9 +109,6 @@ Partial Class FormMain
         Me.LabelProjectsPath.Name = "LabelProjectsPath"
         Me.LabelProjectsPath.Size = New System.Drawing.Size(0, 19)
         Me.LabelProjectsPath.TabIndex = 7
-        '
-        'FolderBrowserDialog1
-        '
         '
         'ButtonChangeProjectsPath
         '
@@ -146,7 +139,7 @@ Partial Class FormMain
         Me.LabelProjectName.AutoSize = True
         Me.LabelProjectName.Font = New System.Drawing.Font("HelveticaNeueLT W1G 35 Th", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.LabelProjectName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(134, Byte), Integer))
-        Me.LabelProjectName.Location = New System.Drawing.Point(20, 116)
+        Me.LabelProjectName.Location = New System.Drawing.Point(20, 121)
         Me.LabelProjectName.Name = "LabelProjectName"
         Me.LabelProjectName.Size = New System.Drawing.Size(97, 18)
         Me.LabelProjectName.TabIndex = 10
@@ -175,6 +168,17 @@ Partial Class FormMain
         Me.ButtonAddRemote.Text = "Add remote"
         Me.ButtonAddRemote.UseVisualStyleBackColor = True
         '
+        'LabelProjectVersion
+        '
+        Me.LabelProjectVersion.AutoSize = True
+        Me.LabelProjectVersion.Font = New System.Drawing.Font("HelveticaNeueLT W1G 35 Th", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.LabelProjectVersion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(134, Byte), Integer))
+        Me.LabelProjectVersion.Location = New System.Drawing.Point(20, 166)
+        Me.LabelProjectVersion.Name = "LabelProjectVersion"
+        Me.LabelProjectVersion.Size = New System.Drawing.Size(105, 18)
+        Me.LabelProjectVersion.TabIndex = 14
+        Me.LabelProjectVersion.Text = "Project Version"
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -183,6 +187,8 @@ Partial Class FormMain
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(500, 750)
         Me.ControlBox = False
+        Me.Controls.Add(Me.LabelProjectVersion)
+        Me.Controls.Add(Me.TextBoxProjectVersion)
         Me.Controls.Add(Me.ButtonAddRemote)
         Me.Controls.Add(Me.LabelTitle)
         Me.Controls.Add(Me.LabelExceptionProjectName)
@@ -193,8 +199,6 @@ Partial Class FormMain
         Me.Controls.Add(Me.TextBoxProjectName)
         Me.Controls.Add(Me.ButtonCreate)
         Me.Controls.Add(Me.ButtonExit)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(500, 750)
@@ -203,7 +207,7 @@ Partial Class FormMain
         Me.Name = "FormMain"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
-        Me.Text = "Form1"
+        Me.Text = "FormMain"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -219,7 +223,7 @@ Partial Class FormMain
     Friend WithEvents LabelProjectName As Label
     Friend WithEvents LabelExceptionProjectName As Label
     Friend WithEvents TextBoxProjectName As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LabelProjectVersion As Label
+    Friend WithEvents TextBoxProjectVersion As TextBox
     Friend WithEvents ButtonAddRemote As Button
 End Class

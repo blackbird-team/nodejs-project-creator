@@ -54,20 +54,9 @@
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-        Dim url As String = Me.TextBox1.Text.ToString()
-
-        'Dim remote As Remote = New Remote()
-
-        Me.Label1.Text = vbEmpty
-
-        'remote.parse(url)
-        'Me.Label1.Text = remote.Protocol
-    End Sub
-
     Private Sub ButtonAddRemote_Click(sender As Object, e As EventArgs) Handles ButtonAddRemote.Click
         If AddRemote.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            Me.TextBox1.Text = AddRemote.MaskedTextBoxRemoteUrl.Text
+            ' Me.TextBox1.Text = AddRemote.MaskedTextBoxRemoteUrl.Text
         End If
     End Sub
 End Class
