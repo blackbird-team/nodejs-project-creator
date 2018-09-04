@@ -1,13 +1,16 @@
 ﻿Public Class AddRemote
     Private Sub MaskedTextBoxRemoteUrl_TextChanged(sender As Object, e As EventArgs) Handles MaskedTextBoxRemoteUrl.TextChanged
-        Dim url As String = Me.MaskedTextBoxRemoteUrl.Text
         Me.LabelExceptionAddRemote.Text = vbEmpty
+        IsValid()
+    End Sub
 
-        Dim remote As Remote = VCS.Parse("origin", url)
-        Try
-            Me.LabelExceptionAddRemote.Text = IIf(remote.Protocol.Length > 0, remote.Protocol, "")
-        Catch ex As Exception
-            Exit Sub
-        End Try
+    Private Sub TextBoxRemoteName_TextChanged(sender As Object, e As EventArgs) Handles TextBoxRemoteName.TextChanged
+        Me.LabelRemoteNameException.Text = IIf(Me.TextBoxRemoteName.Text.Length < 1, "Name can't be undefined", "")
+        IsValid()
+    End Sub
+
+    Private Sub IsValid()
+        Dim check As Boolean = Me.LabelRemoteNameException.Text.Length = 0 And Me.LabelRemoteUrlException.Text.Length = 0
+        Me.ButtonOk.Enabled = check
     End Sub
 End Class

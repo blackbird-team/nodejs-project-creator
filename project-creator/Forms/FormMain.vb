@@ -56,7 +56,21 @@
 
     Private Sub ButtonAddRemote_Click(sender As Object, e As EventArgs) Handles ButtonAddRemote.Click
         If AddRemote.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            ' Me.TextBox1.Text = AddRemote.MaskedTextBoxRemoteUrl.Text
+            Dim name As String = AddRemote.TextBoxRemoteName.Text
+            Dim url As String = AddRemote.MaskedTextBoxRemoteUrl.Text
+            Dim remote As Remote = VCS.AddRemote(name, url)
+            DataGridViewRemotes.Rows.Add({remote.Name, remote.Url})
+            DrawRemotes()
         End If
+    End Sub
+
+    Private Sub DataGridViewRemotes_RowsRemoved(sender As Object, e As DataGridViewRowsRemovedEventArgs) Handles DataGridViewRemotes.RowsRemoved
+        VCS.Remotes.Remove(e.RowIndex + 1)
+
+        DrawRemotes()
+    End Sub
+
+    Private Sub DrawRemotes()
+        Me.Label1.Text = VCS.Remotes.Count
     End Sub
 End Class

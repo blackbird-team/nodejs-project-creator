@@ -29,6 +29,8 @@ Partial Class AddRemote
         Me.LabelExceptionAddRemote = New System.Windows.Forms.Label()
         Me.ButtonOk = New System.Windows.Forms.Button()
         Me.ButtonCancel = New System.Windows.Forms.Button()
+        Me.LabelRemoteNameException = New System.Windows.Forms.Label()
+        Me.LabelRemoteUrlException = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'TextBoxRemoteName
@@ -37,6 +39,7 @@ Partial Class AddRemote
         Me.TextBoxRemoteName.Name = "TextBoxRemoteName"
         Me.TextBoxRemoteName.Size = New System.Drawing.Size(287, 20)
         Me.TextBoxRemoteName.TabIndex = 0
+        Me.TextBoxRemoteName.Text = "origin"
         '
         'MaskedTextBoxRemoteUrl
         '
@@ -75,6 +78,7 @@ Partial Class AddRemote
         'ButtonOk
         '
         Me.ButtonOk.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.ButtonOk.Enabled = False
         Me.ButtonOk.Location = New System.Drawing.Point(179, 187)
         Me.ButtonOk.Name = "ButtonOk"
         Me.ButtonOk.Size = New System.Drawing.Size(75, 23)
@@ -92,11 +96,31 @@ Partial Class AddRemote
         Me.ButtonCancel.Text = "Cancel"
         Me.ButtonCancel.UseVisualStyleBackColor = True
         '
+        'LabelRemoteNameException
+        '
+        Me.LabelRemoteNameException.AutoSize = True
+        Me.LabelRemoteNameException.Location = New System.Drawing.Point(144, 77)
+        Me.LabelRemoteNameException.Name = "LabelRemoteNameException"
+        Me.LabelRemoteNameException.Size = New System.Drawing.Size(0, 13)
+        Me.LabelRemoteNameException.ForeColor = Color.Red
+        Me.LabelRemoteNameException.TabIndex = 7
+        '
+        'LabelRemoteUrlException
+        '
+        Me.LabelRemoteUrlException.AutoSize = True
+        Me.LabelRemoteUrlException.Location = New System.Drawing.Point(144, 131)
+        Me.LabelRemoteUrlException.Name = "LabelRemoteUrlException"
+        Me.LabelRemoteUrlException.Size = New System.Drawing.Size(0, 13)
+        Me.LabelRemoteNameException.ForeColor = Color.Red
+        Me.LabelRemoteUrlException.TabIndex = 8
+        '
         'AddRemote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(482, 225)
+        Me.Controls.Add(Me.LabelRemoteUrlException)
+        Me.Controls.Add(Me.LabelRemoteNameException)
         Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.ButtonOk)
         Me.Controls.Add(Me.LabelExceptionAddRemote)
@@ -118,4 +142,6 @@ Partial Class AddRemote
     Friend WithEvents LabelExceptionAddRemote As Label
     Friend WithEvents ButtonOk As Button
     Friend WithEvents ButtonCancel As Button
+    Friend WithEvents LabelRemoteNameException As Label
+    Friend WithEvents LabelRemoteUrlException As Label
 End Class
