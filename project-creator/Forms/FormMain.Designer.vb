@@ -22,8 +22,6 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LabelTitle = New System.Windows.Forms.Label()
         Me.ButtonExit = New System.Windows.Forms.Button()
         Me.ButtonCreate = New System.Windows.Forms.Button()
@@ -35,14 +33,8 @@ Partial Class FormMain
         Me.LabelProjectsDirectory = New System.Windows.Forms.Label()
         Me.LabelProjectName = New System.Windows.Forms.Label()
         Me.LabelExceptionProjectName = New System.Windows.Forms.Label()
-        Me.ButtonAddRemote = New System.Windows.Forms.Button()
         Me.LabelProjectVersion = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridViewRemotes = New System.Windows.Forms.DataGridView()
-        Me.NameRemote = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UrlRemote = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LabelVCSTitle = New System.Windows.Forms.Label()
-        CType(Me.DataGridViewRemotes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelRemotes1 = New project_creator.PanelRemotes()
         Me.SuspendLayout()
         '
         'LabelTitle
@@ -163,19 +155,6 @@ Partial Class FormMain
         Me.LabelExceptionProjectName.Size = New System.Drawing.Size(0, 18)
         Me.LabelExceptionProjectName.TabIndex = 11
         '
-        'ButtonAddRemote
-        '
-        Me.ButtonAddRemote.FlatAppearance.BorderSize = 0
-        Me.ButtonAddRemote.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonAddRemote.Font = New System.Drawing.Font("HelveticaNeueLT W1G 65 Md", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.ButtonAddRemote.ForeColor = System.Drawing.Color.White
-        Me.ButtonAddRemote.Location = New System.Drawing.Point(365, 265)
-        Me.ButtonAddRemote.Name = "ButtonAddRemote"
-        Me.ButtonAddRemote.Size = New System.Drawing.Size(110, 30)
-        Me.ButtonAddRemote.TabIndex = 12
-        Me.ButtonAddRemote.Text = "Add remote"
-        Me.ButtonAddRemote.UseVisualStyleBackColor = True
-        '
         'LabelProjectVersion
         '
         Me.LabelProjectVersion.AutoSize = True
@@ -187,84 +166,13 @@ Partial Class FormMain
         Me.LabelProjectVersion.TabIndex = 14
         Me.LabelProjectVersion.Text = "Project Version"
         '
-        'Label1
+        'PanelRemotes1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(20, 439)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Label1"
-        '
-        'DataGridViewRemotes
-        '
-        Me.DataGridViewRemotes.AllowUserToAddRows = False
-        Me.DataGridViewRemotes.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.DataGridViewRemotes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("HelveticaNeueLT W1G 35 Th", 15.0!)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(134, Byte), Integer))
-        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewRemotes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewRemotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewRemotes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameRemote, Me.UrlRemote})
-        Me.DataGridViewRemotes.GridColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.DataGridViewRemotes.Location = New System.Drawing.Point(23, 310)
-        Me.DataGridViewRemotes.Name = "DataGridViewRemotes"
-        Me.DataGridViewRemotes.ReadOnly = True
-        Me.DataGridViewRemotes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewRemotes.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewRemotes.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.DataGridViewRemotes.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.DataGridViewRemotes.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("HelveticaNeueLT W1G 45 Lt", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.DataGridViewRemotes.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White
-        Me.DataGridViewRemotes.RowTemplate.DefaultCellStyle.Padding = New System.Windows.Forms.Padding(10, 5, 10, 5)
-        Me.DataGridViewRemotes.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.DataGridViewRemotes.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridViewRemotes.RowTemplate.Height = 35
-        Me.DataGridViewRemotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.DataGridViewRemotes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridViewRemotes.Size = New System.Drawing.Size(450, 126)
-        Me.DataGridViewRemotes.TabIndex = 16
-        '
-        'NameRemote
-        '
-        Me.NameRemote.HeaderText = "Name"
-        Me.NameRemote.Name = "NameRemote"
-        Me.NameRemote.ReadOnly = True
-        Me.NameRemote.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.NameRemote.Width = 120
-        '
-        'UrlRemote
-        '
-        Me.UrlRemote.HeaderText = "Url"
-        Me.UrlRemote.Name = "UrlRemote"
-        Me.UrlRemote.ReadOnly = True
-        Me.UrlRemote.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.UrlRemote.Width = 270
-        '
-        'LabelVCSTitle
-        '
-        Me.LabelVCSTitle.AutoSize = True
-        Me.LabelVCSTitle.Font = New System.Drawing.Font("HelveticaNeueLT W1G 35 Th", 18.0!)
-        Me.LabelVCSTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(143, Byte), Integer), CType(CType(188, Byte), Integer), CType(CType(187, Byte), Integer))
-        Me.LabelVCSTitle.Location = New System.Drawing.Point(18, 263)
-        Me.LabelVCSTitle.Name = "LabelVCSTitle"
-        Me.LabelVCSTitle.Size = New System.Drawing.Size(245, 27)
-        Me.LabelVCSTitle.TabIndex = 17
-        Me.LabelVCSTitle.Text = "Control Version System"
+        Me.PanelRemotes1.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.PanelRemotes1.Location = New System.Drawing.Point(19, 226)
+        Me.PanelRemotes1.Name = "PanelRemotes1"
+        Me.PanelRemotes1.Size = New System.Drawing.Size(456, 242)
+        Me.PanelRemotes1.TabIndex = 15
         '
         'FormMain
         '
@@ -274,12 +182,9 @@ Partial Class FormMain
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(500, 750)
         Me.ControlBox = False
-        Me.Controls.Add(Me.LabelVCSTitle)
-        Me.Controls.Add(Me.DataGridViewRemotes)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PanelRemotes1)
         Me.Controls.Add(Me.LabelProjectVersion)
         Me.Controls.Add(Me.TextBoxProjectVersion)
-        Me.Controls.Add(Me.ButtonAddRemote)
         Me.Controls.Add(Me.LabelTitle)
         Me.Controls.Add(Me.LabelExceptionProjectName)
         Me.Controls.Add(Me.LabelProjectName)
@@ -298,7 +203,6 @@ Partial Class FormMain
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.Text = "FormMain"
-        CType(Me.DataGridViewRemotes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -316,10 +220,5 @@ Partial Class FormMain
     Friend WithEvents TextBoxProjectName As TextBox
     Friend WithEvents LabelProjectVersion As Label
     Friend WithEvents TextBoxProjectVersion As TextBox
-    Friend WithEvents ButtonAddRemote As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridViewRemotes As DataGridView
-    Friend WithEvents NameRemote As DataGridViewTextBoxColumn
-    Friend WithEvents UrlRemote As DataGridViewTextBoxColumn
-    Friend WithEvents LabelVCSTitle As Label
+    Friend WithEvents PanelRemotes1 As PanelRemotes
 End Class

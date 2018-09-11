@@ -87,6 +87,12 @@
       <DependentUpon>FormMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\PanelRemotes.Designer.vb">
+      <DependentUpon>PanelRemotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PanelRemotes.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Services\FileSystem.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMain.resx">
       <DependentUpon>FormMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PanelRemotes.resx">
+      <DependentUpon>PanelRemotes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
