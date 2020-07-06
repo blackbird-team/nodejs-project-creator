@@ -50,6 +50,6 @@
             Next
         End If
 
-        Me.Size = New Size(Me.Size.Width, Me.Size.Height + Me.Panel1.Size.Height)
+        FormMain.Size = New Size(FormMain.Size.Width, FormMain.Size.Height + Me.Size.Height)
     End Sub
 End Class

@@ -74,6 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Project.vb" />
+    <Compile Include="Dependencies\Category.vb" />
+    <Compile Include="Dependencies\Dependencies.vb" />
+    <Compile Include="Dependencies\Dependency.vb" />
     <Compile Include="Forms\AddRemote.Designer.vb">
       <DependentUpon>AddRemote.vb</DependentUpon>
     </Compile>
